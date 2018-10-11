@@ -1,0 +1,90 @@
+
+<!--Start: Mid-->
+<main>
+	
+    <div class="pricing-section price-wrap seprator" style="text-align: left;">
+      <div class="container wow fadeInRight" id="step1">
+            
+            <h2 class="title">Delighted to have your interest - Let's get going!</h2>
+            <div class="row clearfix">
+              <div class="col-md-6 col-md-offset-3">
+
+
+                  <div class="alert alert-danger wow fadeInDown wow fadeInDown" *ngIf="showError">
+                      <div >
+                       All Fields Are required
+                      </div>
+
+                      
+                    </div>
+                <div class="get-started-form">
+                
+                
+                  <form [formGroup]="angForm" novalidate >
+                      <div class="form-group" >
+                      <label >Name</label>
+                      <input type="text" class="form-control" formControlName="name">
+
+                      <div *ngIf="angForm.controls['name'].invalid && (angForm.controls['name'].dirty || angForm.controls['name'].touched )" class="alert alert-danger wow fadeInDown">
+                        <div *ngIf="angForm.controls['name'].errors">
+                          Name is required.
+                        </div>
+
+                        
+                      </div>
+                    
+
+                      </div>
+                       <div class="form-group">
+                      <label>Email:</label>
+                      <input type="email" class="form-control" formControlName="email">
+
+                      <div *ngIf="angForm.controls['email'].invalid && (angForm.controls['email'].dirty || angForm.controls['email'].touched) " class="alert alert-danger wow fadeInDown">
+                        <div *ngIf="angForm.controls['email'].errors ">
+                          Enter A Valid Email Address
+                        </div>
+
+                        
+                      </div>
+                    
+                      </div>
+                      <div class="form-group">
+                      <label >Company Name</label>
+                      <input type="text" class="form-control" formControlName="company" >
+                      
+                      </div>
+                      <div *ngIf="angForm.controls['company'].invalid && (angForm.controls['company'].dirty || angForm.controls['company'].touched)" class="alert alert-danger wow fadeInDown">
+                          <div *ngIf="angForm.controls['company'].errors">
+                            Please Enter Company Name
+                          </div>
+  
+                          
+                        </div>
+                      
+                      <div class="form-group">
+                      <label >We're curious, how did you hear about us?</label>
+                      <textarea class="form-control text-area" rows="6" formControlName="source"></textarea>
+                      </div>
+                      <div *ngIf="angForm.controls['source'].invalid && (angForm.controls['source'].dirty || angForm.controls['source'].touched) " class="alert alert-danger wow fadeInDown">
+                          <div *ngIf="angForm.controls['source'].errors ">
+                            Please tell how did you hear about us?
+                          </div>
+  
+                          
+                        </div>
+                    
+                    <button (click)="checkAllFields()"    class="btn btn-default step2Btn">Get Started <img src="../../assets/images/wht-arrow.png"></button>
+                  </form>
+                </div>
+              </div>					
+            </div>
+      </div>
+          
+       
+          
+    </div>
+    
+  
+  </main>
+  <!--End: Mid-->
+  

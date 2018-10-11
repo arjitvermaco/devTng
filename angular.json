@@ -23,9 +23,20 @@
               "src/assets"
             ],
             "styles": [
+              
+             
               "src/styles.css"
+            
+              
             ],
-            "scripts": []
+            "scripts": [
+              "src/assets/js/jquery.min.js",
+              "src/assets/js/bootstrap.js",
+              "src/assets/js/jquery.bxslider.min.js",
+              "src/assets/js/wow.js",
+              "src/assets/js/common.js"
+
+            ]
           },
           "configurations": {
             "production": {

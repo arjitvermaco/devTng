@@ -1,0 +1,100 @@
+<div class="pricing-section price-wrap seprator" style="text-align: left;">
+    <div class="container wow fadeInUp">
+      <h2 class="title">
+        Get in touch
+      </h2>
+      <div class="row clearfix">
+        <div class="col-md-6">
+          <div class="get-started-form">
+            <h4>
+              <strong>Address: (India)</strong>
+            </h4>
+            <p>
+              Akshya Nagar 1st Block 1st Cross, Rammurthy nagar,
+              Bangalore-560016
+            </p>
+            <h4>
+              <strong>Phone No:</strong>
+            </h4>
+            <p>
+              (0522) 542-2508
+            </p>
+            <h4>
+              <strong>Address: (US)</strong>
+            </h4>
+            <p>
+              13758 Dogwood St, Trona, CA, 93562
+            </p>
+            <h4>
+              <strong>Phone No:</strong>
+            </h4>
+            <p>
+              (860) 889-1708
+            </p>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="get-started-form">
+            <form [formGroup]="angForm" novalidate>
+
+                <div *ngIf="formError" class="alert alert-danger">
+                    <div>
+                      All Fileds Are Required
+                    </div>
+  
+                    
+                  </div>
+              <div class="form-group">
+                <input type="text" class="form-control" placeholder=
+                "Name" formControlName="name" />
+              </div>
+              <div *ngIf="angForm.controls['name'].invalid && (angForm.controls['name'].dirty || angForm.controls['name'].touched)" class="alert alert-danger">
+                  <div *ngIf="angForm.controls['name'].errors">
+                    Name is required.
+                  </div>
+
+                  
+                </div>
+              <div class="form-group">
+                <input type="email" class="form-control" placeholder=
+                "Email" formControlName="email" />
+              </div>
+              <div *ngIf="angForm.controls['email'].invalid && (angForm.controls['email'].dirty || angForm.controls['email'].touched)" class="alert alert-danger">
+                  <div *ngIf="angForm.controls['email'].errors">
+                    Enter A Valid Email Address
+                  </div>
+
+                  
+                </div>
+              <div class="form-group">
+                <input type="text" class="form-control" placeholder=
+                "Subject" formControlName="subject" />
+              </div>
+              <div *ngIf="angForm.controls['subject'].invalid && (angForm.controls['subject'].dirty || angForm.controls['subject'].touched)" class="alert alert-danger">
+                  <div *ngIf="angForm.controls['subject'].errors">
+                    Please enter a subject
+                  </div>
+
+                  
+                </div>
+              <div class="form-group">
+                <textarea class="form-control text-area" rows="6"
+                placeholder="Your Comment" formControlName="comment">
+  </textarea>
+              </div>
+              <div *ngIf="angForm.controls['comment'].invalid && (angForm.controls['comment'].dirty || angForm.controls['comment'].touched)" class="alert alert-danger">
+                  <div *ngIf="angForm.controls['comment'].errors">
+                    Please Enter Your Message
+                  </div>
+
+                  
+                </div>
+              <button type="submit" (click)="checkAllFields()" class=
+              "btn btn-default">Submit <img src=
+              "../../assets/images/wht-arrow.png" /></button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div><!--End: Mid-->

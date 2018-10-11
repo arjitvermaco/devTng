@@ -1,0 +1,60 @@
+
+
+<!--Start: Mid-->
+<main style="text-align: left;">
+	
+	<div class="pricing-section price-wrap seprator">
+		<div class="container wow fadeInRight">
+					<h2 class="title">Summary</h2>
+					
+					<div class="row clearfix">
+						<div class="col-md-6">
+							<div class="get-started-form">
+								<h3>Contact Details</h3>
+								 <table class="table">
+									  <tr>
+										<th>Name</th>
+										<td>{{contact.name}}</td>										
+									  </tr>
+									  <tr>
+										<th>Company</th>
+										<td>{{contact.company}}</td>										
+									  </tr>
+									  <tr>
+										<th>Email</th>
+										<td>{{contact.email}}</td>										
+									  </tr>
+								  </table>
+							</div>
+						</div>
+						<div class="col-md-6">
+							<div class="get-started-form">
+								<h3>Requirements</h3>
+								 <table class="table">
+									  <tr>
+										<th>Needs</th>
+										<td>{{contact.noOfDevs}}</td>										
+									  </tr>
+									  <tr>
+										<th>Timeframe</th>
+										<td>{{contact.time}}</td>										
+									  </tr>
+									  <tr>
+										<th>Start Date</th>
+										<td>{{contact.howSoon}}</td>										
+									  </tr>
+									  <tr>
+										<th>Skills Needed</th>
+										<td>{{contact.skills}}</td>										
+									  </tr>
+								  </table>
+							</div>
+						</div>	
+					</div>
+					<a (click)="submitForm()"  class="btn btn-default">Send Request<img src="../../assets/images/wht-arrow.png"></a>
+		</div>
+	</div>
+	
+
+</main>
+<!--End: Mid-->
